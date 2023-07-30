@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users List</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gray-100">
+    <h1 class="text-4xl font-bold text-center mt-28">Users List</h1>
+    <div class="container mx-auto px-4 py-8">
+      <table class="w-full bg-white shadow-md rounded-lg overflow-hidden">
+        <thead class="bg-black text-white">
+          <tr class="hover:bg-yellow-500">
+            <th class="px-6 py-3 text-left font-semibold">ID</th>
+            <th class="px-6 py-3 text-left font-semibold">Name</th>
+            <th class="px-6 py-3 text-left font-semibold">Email</th>
+            <th class="px-6 py-3 text-left font-semibold">Password</th>
+            <th class="px-6 py-3 text-left font-semibold">Gender</th>
+            <th class="px-6 py-3 text-left font-semibold">Age</th>
+            <th class="px-6 py-3 text-left font-semibold">Weight</th>
+            <th class="px-6 py-3 text-left font-semibold">Hight</th>
+            <th class="px-6 py-3 text-left font-semibold">Staus(IsMarried)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <% users.forEach((user) => { %>
+          <tr>
+            <td class="px-6 py-4"><%= user.id %></td>
+            <td class="px-6 py-4"><%= user.name %></td>
+            <td class="px-6 py-4"><%= user.email %></td>
+            <td class="px-6 py-4"><%= user.password %></td>
+            <td class="px-6 py-4"><%= user.gender %></td>
+            <td class="px-6 py-4"><%= user.age %></td>
+            <td class="px-6 py-4"><%= user.weight %></td>
+            <td class="px-6 py-4"><%= user.height %></td>
+            <td class="px-6 py-4"><%= user.isMarried %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
