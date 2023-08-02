@@ -1,4 +1,9 @@
-const {readUserData,writeUserData,validateUser,validationErrors,} = require("../helpers/userHelper.js");
+const {
+  readUserData,
+  writeUserData,
+  validateUser,
+  validationErrors,
+} = require("../helpers/userfs.helpers.js");
 const fs = require("fs");
 
 fs.mkdir("user", (err) => {

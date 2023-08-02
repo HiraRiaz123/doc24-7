@@ -4,7 +4,7 @@ const port = 3000;
 const ejs = require("ejs");
 app.use(express.json());
 app.set("view engine", "ejs");
-const { userRouter } = require("./routes/user.routes.js");
+const { userRouter } = require("./routes/userfs.routes.js");
 app.use("/", userRouter);
 
 app.listen(port, () => {
