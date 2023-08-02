@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const userController = require("../controllers/userController.controller");
+const userController = require("../controllers/user.controllers");
 const { validateUser, validationErrors } = require("../helpers/userHelper.js");
 
 router.get("/userIndex", userController.userIndex);
