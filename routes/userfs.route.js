@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const userController = require("../controllers/userfs.controllers");
+const userController = require("../controllers/userfs.controller");
 const {
   validateUser,
   validationErrors,
-} = require("../helpers/userfs.helpers.js");
+} = require("../helpers/userfs.helper.js");
 
 router.get("/userIndex", userController.userIndex);
 router.get("/viewUser", userController.viewUser);

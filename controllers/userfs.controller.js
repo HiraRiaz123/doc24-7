@@ -3,13 +3,13 @@ const {
   writeUserData,
   validateUser,
   validationErrors,
-} = require("../helpers/userfs.helpers.js");
+} = require("../helpers/userfs.helper.js");
 const fs = require("fs");
 
-fs.mkdir("user", (err) => {
-  // if (err) throw err;
-  console.log("User folder created successfully");
-});
+// fs.mkdir("user", (err) => {
+//   // if (err) throw err;
+//   console.log("User folder created successfully");
+// });
 
 exports.userIndex = (req, res) => {
   readUserData((err, users) => {
